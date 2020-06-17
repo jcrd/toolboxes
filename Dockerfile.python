@@ -1,0 +1,8 @@
+FROM supplantr/toolbox
+
+# Required to build python-language-server.
+RUN dnf install -y gcc
+RUN dnf install -y python-devel
+
+RUN pip install black
+RUN pip install python-language-server
