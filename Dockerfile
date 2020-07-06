@@ -7,6 +7,7 @@ RUN dnf install -y fzf
 RUN dnf install -y kitty-terminfo
 RUN dnf install -y make
 RUN dnf install -y neovim
+RUN dnf install -y psmisc
 RUN dnf install -y python-neovim
 RUN dnf install -y ranger
 RUN dnf install -y rlwrap
