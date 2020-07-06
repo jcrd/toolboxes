@@ -1,10 +1,10 @@
-toolbox:
-	podman build -t supplantr/toolbox -f Dockerfile .
+toolbox: Dockerfile
+	podman build -t supplantr/toolbox -f $< .
 
-python-toolbox:
-	podman build -t supplantr/python-toolbox -f Dockerfile.python .
+python-toolbox: Dockerfile.python toolbox
+	podman build -t supplantr/python-toolbox -f $< .
 
-shell-toolbox:
-	podman build -t supplantr/shell-toolbox -f Dockerfile.shell .
+shell-toolbox: Dockerfile.shell toolbox
+	podman build -t supplantr/shell-toolbox -f $< .
 
 .PHONY: toolbox python-toolbox shell-toolbox
