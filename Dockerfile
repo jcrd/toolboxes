@@ -17,6 +17,7 @@ RUN dnf install -y zsh
 
 RUN dnf install -y python-pip
 RUN pip install grip
+RUN pip install vim-vint
 
 RUN ln -s /usr/bin/nvim /usr/local/bin/vim
 
