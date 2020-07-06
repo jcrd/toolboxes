@@ -1,0 +1,6 @@
+FROM supplantr/toolbox
+
+RUN dnf install -y ShellCheck
+
+RUN dnf install -y npm
+RUN npm i -g bash-language-server

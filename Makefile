@@ -4,4 +4,7 @@ toolbox:
 python-toolbox:
 	podman build -t supplantr/python-toolbox -f Dockerfile.python .
 
-.PHONY: toolbox python-toolbox
+shell-toolbox:
+	podman build -t supplantr/shell-toolbox -f Dockerfile.shell .
+
+.PHONY: toolbox python-toolbox shell-toolbox
