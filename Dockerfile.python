@@ -4,8 +4,6 @@ FROM supplantr/toolbox
 RUN dnf install -y gcc
 RUN dnf install -y python-devel
 
-RUN dnf install -y python-sphinx
-
 RUN pip install black
 RUN pip install pylint
 RUN pip install python-language-server
