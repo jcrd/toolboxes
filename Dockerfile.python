@@ -7,3 +7,4 @@ RUN dnf install -y python-devel
 RUN pip install black
 RUN pip install pylint
 RUN pip install python-language-server
+RUN pip install mypy
