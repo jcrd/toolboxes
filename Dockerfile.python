@@ -8,3 +8,6 @@ RUN pip install black
 RUN pip install pylint
 RUN pip install python-language-server
 RUN pip install mypy
+
+# msgpack 1.0.0+ required by deoplete.
+RUN pip install --upgrade msgpack
