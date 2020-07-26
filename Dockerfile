@@ -2,6 +2,7 @@ FROM registry.fedoraproject.org/f32/fedora-toolbox:32
 
 RUN dnf upgrade -y
 
+RUN dnf install -y colordiff
 RUN dnf install -y exa
 RUN dnf install -y fzf
 RUN dnf install -y kitty-terminfo
