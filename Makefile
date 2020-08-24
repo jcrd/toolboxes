@@ -1,4 +1,4 @@
-all: toolbox python-toolbox shell-toolbox
+all: toolbox python-toolbox shell-toolbox golang-toolbox
 
 toolbox: Dockerfile
 	podman build -t supplantr/$@ -f $< .
@@ -9,4 +9,7 @@ python-toolbox: Dockerfile.python toolbox
 shell-toolbox: Dockerfile.shell toolbox
 	podman build -t supplantr/$@ -f $< .
 
-.PHONY: all toolbox python-toolbox shell-toolbox
+golang-toolbox: Dockerfile.golang toolbox
+	podman build -t supplantr/$@ -f $< .
+
+.PHONY: all toolbox python-toolbox shell-toolbox golang-toolbox
