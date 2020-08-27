@@ -8,3 +8,5 @@ RUN pip install black
 RUN pip install pylint
 RUN pip install python-language-server
 RUN pip install mypy
+
+RUN pip install pipenv
