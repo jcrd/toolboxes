@@ -1,4 +1,6 @@
-all: toolbox python-toolbox shell-toolbox golang-toolbox
+images := toolbox python-toolbox shell-toolbox golang-toolbox
+
+all: $(images)
 
 toolbox: Dockerfile
 	podman build -t supplantr/$@ -f $< .
@@ -12,4 +14,7 @@ shell-toolbox: Dockerfile.shell toolbox
 golang-toolbox: Dockerfile.golang toolbox
 	podman build -t supplantr/$@ -f $< .
 
-.PHONY: all toolbox python-toolbox shell-toolbox golang-toolbox
+clean:
+	./clean.sh $(images)
+
+.PHONY: $(images) all clean
