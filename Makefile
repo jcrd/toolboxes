@@ -3,16 +3,16 @@ images := toolbox python-toolbox shell-toolbox golang-toolbox
 all: $(images)
 
 toolbox: Dockerfile
-	podman build -t supplantr/$@ -f $< .
+	./build.sh $@ $<
 
 python-toolbox: Dockerfile.python toolbox
-	podman build -t supplantr/$@ -f $< .
+	./build.sh $@ $<
 
 shell-toolbox: Dockerfile.shell toolbox
-	podman build -t supplantr/$@ -f $< .
+	./build.sh $@ $<
 
 golang-toolbox: Dockerfile.golang toolbox
-	podman build -t supplantr/$@ -f $< .
+	./build.sh $@ $<
 
 clean:
 	./clean.sh $(images)
