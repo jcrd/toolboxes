@@ -5,6 +5,7 @@ RUN dnf upgrade -y
 RUN dnf install -y colordiff
 RUN dnf install -y exa
 RUN dnf install -y fzf
+RUN dnf install -y git-subtree
 RUN dnf install -y kitty-terminfo
 RUN dnf install -y make
 RUN dnf install -y neovim
