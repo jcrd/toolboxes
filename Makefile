@@ -1,4 +1,8 @@
-images := toolbox python-toolbox shell-toolbox golang-toolbox
+images := toolbox \
+	python-toolbox \
+	shell-toolbox \
+	golang-toolbox \
+	lua-toolbox
 
 all: $(images)
 
@@ -12,6 +16,9 @@ shell-toolbox: Dockerfile.shell toolbox
 	./build.sh $@ $<
 
 golang-toolbox: Dockerfile.golang toolbox
+	./build.sh $@ $<
+
+lua-toolbox: Dockerfile.lua toolbox
 	./build.sh $@ $<
 
 clean:
