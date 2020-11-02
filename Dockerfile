@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/f32/fedora-toolbox:32
+FROM registry.fedoraproject.org/f33/fedora-toolbox:33
 
 RUN dnf upgrade -y
 
