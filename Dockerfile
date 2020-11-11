@@ -22,9 +22,6 @@ RUN dnf install -y python-pip
 RUN pip install grip
 RUN pip install vim-vint
 
-# msgpack 1.0.0+ required by deoplete.
-RUN pip install --upgrade msgpack
-
 RUN ln -s /usr/bin/nvim /usr/local/bin/vim
 
 CMD /usr/bin/zsh
