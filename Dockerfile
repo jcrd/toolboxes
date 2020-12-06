@@ -16,6 +16,7 @@ RUN dnf install -y rlwrap
 RUN dnf install -y rpkg
 RUN dnf install -y rpmdevtools
 RUN dnf install -y tmux
+RUN dnf install -y tokei
 RUN dnf install -y zsh
 
 RUN dnf install -y python-pip
