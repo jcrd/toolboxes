@@ -7,21 +7,21 @@ images := toolbox \
 all: $(images)
 
 toolbox: Dockerfile
-	./build.sh $@ $<
+	./scripts/build.sh $@ $<
 
 python-toolbox: Dockerfile.python toolbox
-	./build.sh $@ $<
+	./scripts/build.sh $@ $<
 
 shell-toolbox: Dockerfile.shell toolbox
-	./build.sh $@ $<
+	./scripts/build.sh $@ $<
 
 golang-toolbox: Dockerfile.golang toolbox
-	./build.sh $@ $<
+	./scripts/build.sh $@ $<
 
 lua-toolbox: Dockerfile.lua toolbox
-	./build.sh $@ $<
+	./scripts/build.sh $@ $<
 
 clean:
-	./clean.sh $(images)
+	./scripts/clean.sh $(images)
 
 .PHONY: $(images) all clean
