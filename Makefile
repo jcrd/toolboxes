@@ -2,7 +2,8 @@ images := toolbox \
 	python-toolbox \
 	shell-toolbox \
 	golang-toolbox \
-	lua-toolbox
+	lua-toolbox \
+	ebook-toolbox
 
 all: $(images)
 
@@ -19,6 +20,9 @@ golang-toolbox: Dockerfile.golang toolbox
 	./scripts/build.sh $@ $<
 
 lua-toolbox: Dockerfile.lua toolbox
+	./scripts/build.sh $@ $<
+
+ebook-toolbox: Dockerfile.ebook toolbox
 	./scripts/build.sh $@ $<
 
 clean:
