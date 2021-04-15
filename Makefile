@@ -3,6 +3,7 @@ images := toolbox \
 	shell-toolbox \
 	golang-toolbox \
 	lua-toolbox \
+	javascript-toolbox \
 	ansible-toolbox \
 	ebook-toolbox
 
@@ -21,6 +22,9 @@ golang-toolbox: Dockerfile.golang toolbox
 	./scripts/build.sh $@ $<
 
 lua-toolbox: Dockerfile.lua toolbox
+	./scripts/build.sh $@ $<
+
+javascript-toolbox: Dockerfile.javascript toolbox
 	./scripts/build.sh $@ $<
 
 ansible-toolbox: Dockerfile.ansible toolbox
