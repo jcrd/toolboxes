@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/f34/fedora-toolbox:34
+FROM registry.fedoraproject.org/fedora-toolbox:34
 
 RUN dnf install -y colordiff
 RUN dnf install -y exa
