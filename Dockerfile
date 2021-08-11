@@ -1,7 +1,5 @@
 FROM registry.fedoraproject.org/f34/fedora-toolbox:34
 
-RUN dnf upgrade -y
-
 RUN dnf install -y colordiff
 RUN dnf install -y exa
 RUN dnf install -y fzf
