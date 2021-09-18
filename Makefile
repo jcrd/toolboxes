@@ -13,6 +13,11 @@ all: pull-base $(images)
 pull-base:
 	podman pull $(base)
 
+toolbox-rmi:
+	toolbox rmi --all --force
+
+refresh: toolbox-rmi clean all
+
 toolbox: Dockerfile
 	./scripts/build.sh $@ $<
 
@@ -40,4 +45,4 @@ ebook-toolbox: Dockerfile.ebook toolbox
 clean:
 	./scripts/clean.sh $(images)
 
-.PHONY: $(images) all pull-base clean
+.PHONY: $(images) all pull-base toolbox-rmi refresh clean
