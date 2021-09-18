@@ -1,3 +1,4 @@
+base := registry.fedoraproject.org/fedora-toolbox:34
 images := toolbox \
 	python-toolbox \
 	shell-toolbox \
@@ -7,7 +8,10 @@ images := toolbox \
 	ansible-toolbox \
 	ebook-toolbox
 
-all: $(images)
+all: pull-base $(images)
+
+pull-base:
+	podman pull $(base)
 
 toolbox: Dockerfile
 	./scripts/build.sh $@ $<
@@ -36,4 +40,4 @@ ebook-toolbox: Dockerfile.ebook toolbox
 clean:
 	./scripts/clean.sh $(images)
 
-.PHONY: $(images) all clean
+.PHONY: $(images) all pull-base clean
