@@ -9,6 +9,7 @@ RUN dnf install -y neovim
 RUN dnf install -y psmisc
 RUN dnf install -y python-neovim
 RUN dnf install -y ranger
+RUN dnf install -y ripgrep
 RUN dnf install -y rlwrap
 RUN dnf install -y rpkg
 RUN dnf install -y rpmdevtools
