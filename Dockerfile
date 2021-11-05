@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-toolbox:34
+FROM registry.fedoraproject.org/fedora-toolbox:35
 
 RUN dnf install -y colordiff
 RUN dnf install -y fzf
