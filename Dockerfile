@@ -1,5 +1,6 @@
 FROM registry.fedoraproject.org/fedora-toolbox:35
 
+RUN dnf install -y atool
 RUN dnf install -y colordiff
 RUN dnf install -y fzf
 RUN dnf install -y git-subtree
