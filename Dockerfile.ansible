@@ -1,3 +1,4 @@
 FROM supplantr/toolbox
 
-RUN pip install ansible-lint
+RUN dnf install -y ansible
+RUN dnf install -y ansible-lint
