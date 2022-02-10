@@ -2,6 +2,7 @@ FROM registry.fedoraproject.org/fedora-toolbox:35
 
 RUN dnf install -y atool
 RUN dnf install -y colordiff
+RUN dnf install -y fd-find
 RUN dnf install -y fzf
 RUN dnf install -y git-subtree
 RUN dnf install -y kitty-terminfo
