@@ -7,7 +7,8 @@ images := toolbox \
 	javascript-toolbox \
 	ansible-toolbox \
 	ebook-toolbox \
-	hugo-toolbox
+	hugo-toolbox \
+	alien-toolbox
 
 all: pull-base $(images)
 
@@ -44,6 +45,9 @@ ebook-toolbox: Dockerfile.ebook toolbox
 	./scripts/build.sh $@ $<
 
 hugo-toolbox: Dockerfile.hugo toolbox
+	./scripts/build.sh $@ $<
+
+alien-toolbox: Dockerfile.alien toolbox
 	./scripts/build.sh $@ $<
 
 clean:
