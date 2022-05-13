@@ -1,5 +1,3 @@
 FROM supplantr/toolbox
 
 RUN dnf install -y go
-
-RUN GO111MODULE=on go get golang.org/x/tools/gopls@latest
