@@ -1,4 +1,4 @@
-base := registry.fedoraproject.org/fedora-toolbox:35
+base := registry.fedoraproject.org/fedora-toolbox:36
 images := toolbox \
 	python-toolbox \
 	shell-toolbox \
