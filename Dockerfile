@@ -6,6 +6,7 @@ RUN dnf install -y git-subtree
 RUN dnf install -y kitty-terminfo
 RUN dnf install -y make
 RUN dnf install -y neovim
+RUN dnf install -y perl
 RUN dnf install -y ranger
 RUN dnf install -y rlwrap
 RUN dnf install -y rpkg
