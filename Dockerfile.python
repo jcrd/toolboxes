@@ -4,6 +4,9 @@ FROM supplantr/toolbox
 RUN dnf install -y gcc
 RUN dnf install -y python-devel
 
+# Install python-unversioned-command.
+RUN dnf install -y python
+
 RUN dnf install -y pyp2rpm
 
 RUN pip install black
