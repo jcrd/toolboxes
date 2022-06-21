@@ -1,6 +1,7 @@
 FROM registry.fedoraproject.org/fedora-toolbox:36
 
 RUN dnf install -y colordiff
+RUN dnf install -y direnv
 RUN dnf install -y fzf
 RUN dnf install -y git-subtree
 RUN dnf install -y kitty-terminfo
