@@ -1,15 +1,13 @@
-all: pull-base build
+build: pull-base
+	./scripts/build.sh . $(name)
 
 pull-base:
 	./scripts/pull_base.sh Dockerfile
 
-build:
-	./scripts/build.sh . $(name)
-
 toolbox-rmi:
 	toolbox rmi --all --force
 
-refresh: toolbox-rmi clean all
+refresh: toolbox-rmi clean pull-base
 
 clean:
 	./scripts/clean.sh . $(name)
