@@ -1,5 +1,5 @@
 FROM supplantr/toolbox
 
 RUN dnf install -y ansible
-RUN dnf install -y ansible-lint
+RUN dnf install -y pre-commit
 RUN dnf install -y sshpass
